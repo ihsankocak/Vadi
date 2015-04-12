@@ -30,7 +30,7 @@ import lombok.RequiredArgsConstructor;
  */
 @Entity
 @Data
-@RequiredArgsConstructor
+
 public class Item {
 
 	private @Id @GeneratedValue Long id;
@@ -38,5 +38,10 @@ public class Item {
 
 	Item() {
 		this.description = null;
+	}
+
+	public Item(String description) {
+		super();
+		this.description = description;
 	}
 }
